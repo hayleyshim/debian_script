@@ -1,3 +1,3 @@
-#test.py
+#!/usr/bin/python3
 
 print("hello, debian")
