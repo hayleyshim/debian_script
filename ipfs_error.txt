@@ -1,0 +1,36 @@
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+root@worker-2:~# journalctl -xe
+░░
+░░ Automatic restarting of the unit docker.service has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Feb 07 14:50:21 worker-2 systemd[1]: Stopped Docker Application Container Engine.
+░░ Subject: A stop job for unit docker.service has finished
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░
+░░ A stop job for unit docker.service has finished.
+░░
+░░ The job identifier is 1690350 and the job result is done.
+Feb 07 14:50:21 worker-2 systemd[1]: docker.service: Start request repeated too quickly.
+Feb 07 14:50:21 worker-2 systemd[1]: docker.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░
+░░ The unit docker.service has entered the 'failed' state with result 'exit-code'.
+Feb 07 14:50:21 worker-2 systemd[1]: Failed to start Docker Application Container Engine.
+░░ Subject: A start job for unit docker.service has failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░
+░░ A start job for unit docker.service has finished with a failure.
+░░
+░░ The job identifier is 1690350 and the job result is failed.
+Feb 07 14:50:21 worker-2 systemd[1]: docker.socket: Failed with result 'service-start-limit-hit'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░
+░░ The unit docker.socket has entered the 'failed' state with result 'service-start-limit-hit'.
+lines 1569-1600/1600 (END)
